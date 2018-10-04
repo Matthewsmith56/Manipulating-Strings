@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace String_Manipulation
 {
@@ -10,6 +7,23 @@ namespace String_Manipulation
     {
         static void Main(string[] args)
         {
+            int totalNum = 0;
+
+            for (int i = 999 ; i < 1000000; i++)
+            {
+                string number ="";
+                string tempVar = "";
+
+                number = Convert.ToString(i);
+
+                char[] varChar = number.ToCharArray();
+
+                for (int j = varChar.Length-1; j >= 0; j--)
+                      tempVar += varChar[j];
+                if (tempVar == Convert.ToString(i))
+                      Console.WriteLine(i);
+            }
+
         }
     }
 }
